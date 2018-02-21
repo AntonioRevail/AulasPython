@@ -16,12 +16,14 @@ def calculo_ir(salarioliquido):
     else:
         return salarioliquido*0.25
 
-def calculasalariobase(salario,dependente)
+def calculasalariobase(salario,dependente):
     desc_inss=calculo_inss(salario)
     salario_ir = salario-desc_inss-100*dependente
     desc_ir = calculo_ir(salario_ir)
     return salario-desc_inss-desc_ir
 
 
-salariobruto = input(" Entre com seu salario bruto= ")
-dependente = input("Entre com o numero de depende")
+salariobruto = input(" Entre com seu salario bruto = ")
+dependente = input("Entre com o numero de depende = ")
+
+print ("Salario base = ", calculasalariobase(salariobruto,dependente))
